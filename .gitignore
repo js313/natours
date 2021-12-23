@@ -1,0 +1,7 @@
+node_modules/
+*.env
+.cache/
+Todo
+4-natours/
+dev-data/
+seed/
