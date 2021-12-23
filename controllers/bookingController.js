@@ -45,7 +45,7 @@ module.exports.webhookCheckout = (req, res, next) => {
     const signature = req.headers['stripe-signature']
     let event
     try {
-        event = stripe.webhoks.constructEvent(req,body, signature, process.env.STRIPE_WEBHOOK_KEY)
+        event = stripe.webhooks.constructEvent(req,body, signature, process.env.STRIPE_WEBHOOK_KEY)
     } catch(err) {
         return res.status(400).send(`webhook error: ${err.message}`)
     }
